@@ -1,20 +1,38 @@
-name: Feature Request
-description: Suggest an idea for this project
-labels: [feature-request]
-assignees: []
+name: "Feature Request"
+description: Got an idea for a cool new feature? Use this template.
+title: "[Feature Request]"
+labels: [enhancement]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to help improve the randomizer!
+        
+        Please fill out this form with as much information as possible.
+        
   - type: textarea
     id: description
     attributes:
       label: Describe the feature
-      description: A clear and concise description of the feature you are proposing.
+      description: A clear description of the feature to be implemented.
     validations:
       required: true
+      
   - type: textarea
     id: solution
     attributes:
-      label: Proposed Solution
-      description: |
-        Suggest how to implement the addition or change.
+      label: Describe the solution
+      description: A clear description of what your solution is.
     validations:
       required: false
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional Information
+      description: |
+        Any other relevant information you'd like to include? For example:
+        * Relevant issues
+        * Testing results or mockup images
+        * It'd make you very happy for x reason
+        * ...

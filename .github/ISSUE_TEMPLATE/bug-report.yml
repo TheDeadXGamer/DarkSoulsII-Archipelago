@@ -1,37 +1,74 @@
 ---
 name: "Bug Report"
-description: Create a report to help us improve
+description: Encountered a bug? Report it with this template. 
+title: "[BUG]"
 labels: [bug]
-assignees: []
 body:
-  - type: textarea
-    id: version
+  - type: markdown
+    attributes: 
+      value: |
+        Thank you for helping us make this randomizer better!
+
+        Please provide as much detail about the bug as possible.
+        
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: "I have made sure that there are no [*open*](https://github.com/TheDeadXGamer/DarkSoulsII-Archipelago/issues) issues that are similar to the one I want to report."
+          required: true
+        - label: "I have filled out this report with as much information about the issue as possible."
+          required: true
+        - label: "This issue only concerns one bug."
+          required: true
+          
+  - type: input
+    id: mod-version
     attributes:
       label: Mod Version
       description: |
-        Please indicate what mod's version you were using so that we can easily track down the bug.
+        In which mod version did you encounter the bug?
+      placeholder: "x.x.x"
     validations:
       required: true
-  - type: textarea
-    id: seed
+      
+  - type: input
+    id: device-os-info
     attributes:
-      label: Seed / Spoiler Log
+      label: Operating System
       description: |
-        Please provide the Seed and/or the Spoiler Log.
+        With what operating system (+ version) did you encounter the bug?
+      placeholder: "Example: Windows 11"
     validations:
       required: true
+
   - type: textarea
-    id: description
+    id: steps-to-reproduce
     attributes:
-      label: Describe the bug
-      description: What is the problem? Please provide a clear and concise description of the bug.
-    validations:
-      required: true
-  - type: textarea
-    id: context
-    attributes:
-      label: Additional Information/Context
+      label: Steps to reproduce the bug
       description: |
-        Anything else that might be relevant for troubleshooting this bug.
+        What steps have to be taken in order to reproduce the bug?
+
+        If the bug can't be reliably reproduced, please try to give as many details as possible on how you think you encountered it.
+      
+  - type: textarea
+    id: behaviour
+    attributes:
+      label: Behaviour
+      description: |
+        What happens when the steps above are reproduced? What is the bug?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional Information
+      description: |
+        Any other relevant information that you'd like to include? For example:
+        * Screenshots
+        * Network issues
+        * ...
     validations:
       required: false
