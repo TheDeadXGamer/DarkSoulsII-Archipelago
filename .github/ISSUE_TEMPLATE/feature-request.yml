@@ -1,6 +1,6 @@
-name: Feature Request
+name: "Feature Request"
 description: Got an idea for a cool new feature? Use this template.
-title: [Feature Request]
+title: "[Feature Request]"
 labels: [enhancement]
 body:
   - type: markdown
